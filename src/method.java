@@ -8,7 +8,7 @@ public class method {
         System.out.println(plus(n));
         System.out.println(minus(n));
         System.out.println(nn(n));
-        System.out.println(nnn(n));
+        System.out.println(nnnn(n));
     }
 
     public static int plus(int n){
@@ -20,7 +20,7 @@ public class method {
     public static int nn(int n){
         return n*n;
     }
-    public static int nnn(int n){
+    public static int nnnn(int n){
         return n/n;
     }
 }
