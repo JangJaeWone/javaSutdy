@@ -1,13 +1,20 @@
 import java.util.Scanner;
 
 public class Method2 {
-    public static void main(String[] args) {
-        Scanner a = new Scanner(System.in);
-        String s = a.next();
+    public static String numbering(int init, int limit) {
+        int i = init;
+        String output = "";
 
-        System.out.println(aaa(s));
+        while (i < limit) {
+            output += i;
+            i++;
+        }
+        return output;
     }
-    public static String aaa(String a){
-        return a+a;
+
+    public static void main(String[] args) {
+        String result = numbering(1, 5);
+
+        System.out.println(result);
     }
 }

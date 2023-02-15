@@ -4,10 +4,15 @@ public class wkdwodnjs {
     public static void main(String[] args) {
         Scanner a = new Scanner(System.in);
         String s = a.next();
+        String d = a.next();
         if(s.equals("qwer")){
-            System.out.println("asdf");
+            if (d.equals("asdf")){
+                System.out.println("aaa");
+            }else {
+                System.out.println("bbb");
+            }
         }else {
-            System.out.println("zxcv");
+            System.out.println("bbb");
         }
     }
 }

@@ -13,7 +13,7 @@ public class tes5 {
                 System.out.println("bbb");
             }
         }else {
-            System.out.println("bbb");
+            System.out.println("ddd");
         }
     }
 }

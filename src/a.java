@@ -2,21 +2,17 @@ import java.util.Scanner;
 
 public class a {
     public static void main(String[] args) {
-        Scanner s = new Scanner(System.in);
-        int a = s.nextInt();
-        switch(a){
-            case 1:
-            System.out.println(1);
-            break;
-            case 2:
-            System.out.println(2);
-            break;
-            case 3:
-            System.out.println(3);
-            break;
-            default:
-                System.out.println(4);
-                break;
+        Scanner sc = new Scanner(System.in);
+        int s = sc.nextInt();
+
+        for (int i = 1; i <= s; i++) {
+            for (int j = 1; j <= s - i; j++) {
+                System.out.print(" ");
+            }
+            for (int q = 1; q <= i; q++) {
+                System.out.print("*");
+            }
+            System.out.println();
         }
     }
 }
