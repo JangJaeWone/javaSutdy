@@ -1,3 +1,5 @@
+package et;
+
 import java.util.Scanner;
 
 public class Main {

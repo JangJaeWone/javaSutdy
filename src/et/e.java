@@ -1,3 +1,5 @@
+package et;
+
 public class e {
 
     public static String numbering(int init, int limit) {

@@ -1,11 +1,13 @@
+package et;
+
 public class ARRAY {
 
     public static void main(String[] args) {
         String[][] a = new String[4][2];
-        a[0] = new String[]{"a", "1"};
-        a[1] = new String[]{"b", "2"};
-        a[2] = new String[]{"c", "3"};
-        a[3] = new String[]{"d", "4"};
+        a[0] = new String[]{"et.a", "1"};
+        a[1] = new String[]{"et.b", "2"};
+        a[2] = new String[]{"et.c", "3"};
+        a[3] = new String[]{"et.d", "4"};
 
         System.out.println(a[0][0]);
         System.out.println(a[0][1]);

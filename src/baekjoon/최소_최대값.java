@@ -1,3 +1,5 @@
+package baekjoon;
+
 import java.util.Scanner;
 
 public class 최소_최대값 {
