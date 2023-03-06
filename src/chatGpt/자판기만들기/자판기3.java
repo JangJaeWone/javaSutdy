@@ -28,6 +28,12 @@ public class 자판기3 {
         Boolean first = true; //초기값을 트루로 적용
         int money = 0; //처음 머니의 값은 0
 
+        if(first){//첫 실행 화면  first를 트루로 초기화 했으므로 fi문 실행
+            System.out.print("돈을 넣어주세요: ");
+            money = sc.nextInt(); //돈을 입력받음
+            first = false; //한번만 실행
+        }
+
         while(true) {//매뉴판
             System.out.println("==================================================");
             System.out.println("음료 자판기 입니다.");
@@ -37,12 +43,6 @@ public class 자판기3 {
             //음료 가격 재고 출력
             System.out.println();
             System.out.println("==================================================");
-
-            if(first){//첫 실행 화면
-                System.out.print("돈을 넣어주세요: ");
-                money = sc.nextInt(); //돈을 입력받음
-                first = false; //한번만 실행
-            }
 
             System.out.print("메뉴 입력: ");
             int ii = sc.nextInt(); //매뉴 번호를 입력받음
@@ -57,20 +57,26 @@ public class 자판기3 {
                 }
                 else {//재고가 충분하지 않다면 없다고 출력
                     System.out.println("음료가 없습니다.");
-                    continue; // 반복작업을 중단했다가 다시 반복
+                    continue; // 반복작업을 중단했다가 다음 반복문으로
                 }
             }
             else {//돈이 충분하지 않다면 금액이 부족하다고 출력
                 System.out.println("금액이 부족합니다!");
+                System.out.print("돈을 넣어주세요 : ");
+                int extra = sc.nextInt();//돈 입력
+                money += extra;//원래 있는 돈에 새로 입력한 돈 추가
+                System.out.println("금액이 추가되었습니다! 잔액: " + money);
             }
 
             System.out.println("잔액 : " + money); //잔액 출력
 
             // 모든 돈을 사용하면 이용 종료 후 초기화면 진입
             if(money == 0) {//남은돈이 0이라면
-                System.out.println("감사합니다.");
-                first = true; //한번만 실행
-                continue; // 반복작업을 중단했다가 다시 반복
+                System.out.println("금액이 부족합니다!");
+                System.out.print("돈을 넣어주세요 : ");
+                int extra = sc.nextInt();//돈 입력
+                money += extra;//원래 있는 돈에 새로 입력한 돈 추가
+                System.out.println("금액이 추가되었습니다! 잔액: " + money);
             }
 
             // 돈이 남아있다면 선택지를 줌.
@@ -79,7 +85,7 @@ public class 자판기3 {
             int iii = sc.nextInt();//번호를 입력받음
 
             if(iii == 1) {//계속 구매하기
-                continue; // 반복작업을 중단했다가 다시 반복
+                continue; // 반복작업을 중단했다가 다음 반복문으로
             }
             else if (iii == 2) {//금액 추가하기
                 System.out.print("돈을 넣어주세요 : ");
